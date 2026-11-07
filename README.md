@@ -199,41 +199,123 @@ Form Pemeriksaan dimulai setelah Dokter memilih pasien dari halaman Antrean Dokt
 ### 6.3 ERD (Entity Relationship Diagram)
 
 <details>
-<summary><b>Logical</summary>
+<summary>Logical</summary>
 <br>
 <img width="2760" height="1486" alt="Logical_pulse" src="https://github.com/user-attachments/assets/4a16c888-ad42-4a80-95a9-a439865d49db" />
 Diagram logical database pada sistem PulseCare menggambarkan hubungan antarentitas, yaitu pegawai, admin, petugas, dokter, shift, pasien, poliklinik, riwayat_kunjungan, dan hasil_kunjungan. Pegawai memiliki beberapa peran, yaitu admin, petugas, dan dokter. Petugas memiliki shift dan menangani pendaftaran kunjungan pasien. Setiap pasien dapat memiliki beberapa riwayat kunjungan yang terhubung dengan poliklinik. Kunjungan tersebut juga dapat ditangani oleh dokter dan menghasilkan data pemeriksaan berupa keluhan, diagnosis, resep obat, serta catatan tindak lanjut. Hubungan antarentitas ini membantu menggambarkan alur pengelolaan data pasien dan pelayanan kesehatan secara terstruktur dalam sistem PulseCare.
 </details>
 
 <details>
-<summary><b>Relational</summary>
+<summary>Relational</summary>
 <br>
 
 </details>
+
 ---
 
-## 7. Struktur Project
-
-> Nama folder dan package perlu disesuaikan dengan source code final.
+## 7. Struktur Folder/Package MASIH BELUM FIX)))))
 
 ```text
 PulseCare/
+│
+├── lib/
+│   └── unknown/
+│       └── binary/
+│           └── AbsoluteLayout/
+│               └── SNAPSHOT/
+│                   └── AbsoluteLayout-SNAPSHOT.jar
+│
 ├── src/
-│   ├── controller/
-│   ├── dao/
-│   ├── database/
-│   ├── model/
-│   └── view/
-├── docs/
-│   ├── flowchart.png
-│   ├── use-case.png
-│   ├── erd.png
-│   ├── dashboard-admin.png
-│   ├── daftarkan-kunjungan.png
-│   └── form-pemeriksaan.png
-├── nbproject/
-├── pom.xml
-└── README.md
+│   └── main/
+│       ├── java/
+│       │   ├── config/
+│       │   │   ├── KoneksiDB.java
+│       │   │   └── TestKoneksiDB.java
+│       │   │
+│       │   ├── controller/
+│       │   │   ├── AdminController.java
+│       │   │   ├── KunjunganController.java
+│       │   │   ├── LoginController.java
+│       │   │   ├── PasienController.java
+│       │   │   ├── PemeriksaanController.java
+│       │   │   └── RiwayatKunjunganController.java
+│       │   │
+│       │   ├── main/
+│       │   │   └── Main.java
+│       │   │
+│       │   ├── model/
+│       │   │   ├── Admin.java
+│       │   │   ├── Akun.java
+│       │   │   ├── Dokter.java
+│       │   │   ├── HasilKunjungan.java
+│       │   │   ├── Pasien.java
+│       │   │   ├── Petugas.java
+│       │   │   ├── Poliklinik.java
+│       │   │   ├── RiwayatKunjungan.java
+│       │   │   ├── Shift.java
+│       │   │   │
+│       │   │   └── dao/
+│       │   │       ├── AdminDAO.java
+│       │   │       ├── AntreanDokterDAO.java
+│       │   │       ├── HasilKunjunganDAO.java
+│       │   │       ├── KunjunganDAO.java
+│       │   │       ├── LoginDAO.java
+│       │   │       ├── PasienDAO.java
+│       │   │       ├── ReferensiDAO.java
+│       │   │       └── RiwayatKunjunganDAO.java
+│       │   │
+│       │   └── view/
+│       │       ├── AntreanDokter.java
+│       │       ├── AntreanDokter.form
+│       │       ├── DaftarkanKunjungan.java
+│       │       ├── DaftarkanKunjungan.form
+│       │       ├── DashboardAdmin.java
+│       │       ├── DashboardAdmin.form
+│       │       ├── DashboardDokter.java
+│       │       ├── DashboardDokter.form
+│       │       ├── DashboardPetugas.java
+│       │       ├── DashboardPetugas.form
+│       │       ├── FormAkun.java
+│       │       ├── FormAkun.form
+│       │       ├── FormPasien.java
+│       │       ├── FormPasien.form
+│       │       ├── FormPemeriksaan.java
+│       │       ├── FormPemeriksaan.form
+│       │       ├── KelolaAkun.java
+│       │       ├── KelolaAkun.form
+│       │       ├── KelolaPasien.java
+│       │       ├── KelolaPasien.form
+│       │       ├── Login.java
+│       │       ├── Login.form
+│       │       ├── MainFrame.java
+│       │       ├── MainFrame.form
+│       │       ├── MenuUtama.java
+│       │       ├── MenuUtama.form
+│       │       ├── PerbaruiStatus.java
+│       │       ├── PerbaruiStatus.form
+│       │       ├── RiwayatKunjungan.java
+│       │       └── RiwayatKunjungan.form
+│       │
+│       └── resources/
+│           ├── Admin 70x70.png
+│           ├── Dokter 50x50.png
+│           ├── Dokter 70x70.png
+│           ├── Dokter_40x40.png
+│           ├── Hapus akun.jpg.jpeg
+│           ├── Logo PulseCare 256x256.png
+│           ├── Logo PulseCare sedang tanpa tulisan.png
+│           ├── Logo PulseCare sedang.png
+│           ├── Modern Hospital Entrance and Wayfinding.png
+│           ├── bg form.png
+│           ├── hapus akun besar.png
+│           ├── orang navy baru.jpg
+│           ├── orang pulsecare yg bener.png
+│           ├── petugas_40x40.png
+│           ├── pulsecare_profile_icon_50.png
+│           ├── tambah akun.png
+│           └── ubah akun.png
+│
+└── pom.xml
 ```
 
 | Package | Fungsi |
@@ -249,7 +331,7 @@ PulseCare/
 
 ## 8. Penerapan Konsep OOP
 
-PulseCare dibuat dengan konsep Object-Oriented Programming. Empat konsep utamanya:
+PulseCare dibuat dengan konsep Object-Oriented Programming atau OOP. Empat konsep utamanya:
 
 | Konsep | Penjelasan |
 |---|---|
@@ -258,33 +340,37 @@ PulseCare dibuat dengan konsep Object-Oriented Programming. Empat konsep utamany
 | **Polymorphism** | Method yang sama berperilaku berbeda tergantung objeknya, misalnya lewat method yang di-override class turunan. |
 | **Abstraction** | Menampilkan bagian penting dan menyembunyikan detail proses, melalui `abstract class` atau `interface`. |
 
-### 8.1 Encapsulation
+### 8.1 Encapsulation (Enkapsulasi)
 
+**Contoh implementasi:**
 ```java
 kode
 ```
 
-### 8.2 Inheritance
+### 8.2 Inheritance (Pewarisan)
 
+**Contoh implementasi:**
 ```java
 kode
 ```
-### 8.3 Polymorphism
+### 8.3 Polymorphism (Polimorfisme)
 
+**Contoh implementasi:**
 ```java
 kode
 ```
-### 8.4 Abstraction
+### 8.4 Abstraction (Abstraksi)
 
+**Contoh implementasi:**
 ```java
 kode
 ```
 
 ---
 
-## Cara Menjalankan
+## 9. Cara Penggunaan Program
 
-### Prasyarat
+### 9.1 Persiapan Sebelum Menjalankan Program
 
 - [x] JDK sesuai kebutuhan project
 - [x] Apache NetBeans
@@ -292,7 +378,7 @@ kode
 - [x] Database PulseCare beserta tabel yang dibutuhkan
 - [x] Dependency project, termasuk MySQL Connector/J
 
-### Langkah
+### 9.2 Langkah Menjalankan Aplikasi
 
 1. Buka **Laragon**, lalu jalankan **MySQL**.
 2. Pastikan database **PulseCare** sudah dibuat dan tabelnya tersedia.
@@ -301,13 +387,195 @@ kode
 5. Jalankan project dari NetBeans.
 6. Login menggunakan akun yang sudah terdaftar.
 
+### 9.3 Cara Penggunaan Fitur Aplikasi
+### 1. Menu Utama
+<img width="599" height="391" alt="image" src="https://github.com/user-attachments/assets/9539061d-dce3-4d3c-8224-99c1dd429a5a" />
+
+1. Jalankan aplikasi PulseCare.
+   
+2. unggu hingga halaman Menu Utama muncul.
+
+3. Klik tombol Masuk untuk melanjutkan ke halaman Login.
+
+4. Jika tidak ingin menggunakan aplikasi, klik tombol Keluar untuk menutup aplikasi.
+
+### 2. Login
+<img width="602" height="413" alt="Screenshot 2026-11-07 043741" src="https://github.com/user-attachments/assets/16877c52-0808-4cd4-b6a7-5103d1e7d8c5" />
+
+1. Setelah menekan tombol Masuk, halaman Login akan ditampilkan
+
+2. Masukkan Username/NIP pada kolom yang tersedia
+
+3. Masukkan Password sesuai dengan akun yang terdaftar
+
+4. klik tombol login
+
+
+5. Sistem akan memeriksa kecocokan data akun yang terdaftar
+
+6. Jika data benar, pengguna akan diarahkan ke dashboard sesuai role
+
+7. jika data salah, sistem menampilkan pemberitahuan bahwa Username atau Password tidak sesuai
+
+### 3. Dashboard Admin
+<img width="605" height="422" alt="image" src="https://github.com/user-attachments/assets/12c66bb7-1c4f-45bf-88ea-ec774ddbf53d" />
+
+1. Login menggunakan akun dengan role Admin
+
+2. Sistem akan menampilkan Dashboard Admin
+
+3. Pilih menu Kelola Akun untuk mengelola akun
+
+4. Pilih menu Kelola Data Pasien untuk mengelola informasi pasien
+
+### 4. Kelola Akun
+<img width="604" height="416" alt="image" src="https://github.com/user-attachments/assets/4690c391-4853-4552-85fd-60805dda2f95" />
+
+1. Buka menu Kelola Akun.
+
+2. Sistem menampilkan daftar akun pengguna.
+
+3. Pilih fungsi tambah atau ubah akun sesuai kebutuhan.
+
+4. Isi informasi akun pada formulir.
+
+5. Tentukan role pengguna, seperti Admin, Petugas, atau Dokter.
+
+6. Simpan perubahan.
+
+7. Sistem menyimpan data akun ke database.
+
+### 5. Form Pasien
+<img width="299" height="400" alt="image" src="https://github.com/user-attachments/assets/521c9759-446d-400c-9cc0-6b503517252c" />
+
+1. Buka menu Kelola Pasien.
+
+2. Sistem menampilkan daftar pasien.
+
+3. Pilih pasien untuk melihat atau mengubah datanya.
+
+4. Untuk menambahkan pasien, buka formulir pasien.
+
+5. Isi identitas pasien sesuai informasi yang tersedia.
+
+6. Simpan data pasien.
+
+7. Sistem menyimpan perubahan ke database.
+   
+### 6. Dashboard Petugas 
+<img width="1206" height="820" alt="WhatsApp Image 2026-11-07 at 22 44 30" src="https://github.com/user-attachments/assets/812b9ae7-5a2f-4678-b547-8e83be2cca92" />
+
+
+1. Login menggunakan akun dengan role Petugas.
+
+2. Sistem menampilkan Dashboard Petugas.
+
+3. Pilih menu Kelola Data Pasien atau Daftarkan Kunjungan sesuai kebutuhan.
+
+### 7.Mendaftaran Kunjungan
+<img width="581" height="394" alt="image" src="https://github.com/user-attachments/assets/03825d10-4ed3-4002-9ad1-29670e590cc6" />
+
+1. Buka menu Daftarkan Kunjungan.
+
+2. Masukkan identitas pasien pada kolom pencarian.
+
+3. Klik tombol pencarian untuk menemukan data pasien.
+
+4. Jika pasien sudah terdaftar, pilih data pasien tersebut.
+
+5. Jika pasien belum terdaftar, tambahkan pasien melalui formulir FormPasien.java.
+
+6. Pilih poliklinik tujuan sesuai kebutuhan kunjungan.
+
+7. Lengkapi informasi pendaftaran.
+
+8. Simpan pendaftaran kunjungan.
+
+9. Sistem mencatat kunjungan dan memberikan nomor antrean kepada pasien.
+
+
+### 8. Dashboard Dokter
+<img width="604" height="412" alt="image" src="https://github.com/user-attachments/assets/e71100d5-51b6-46b7-b914-6ed6ddf68102" />
+
+1. Login menggunakan akun dengan role Dokter.
+
+2. Sistem menampilkan Dashboard Dokter.
+
+3. Pilih menu Antrean Dokter untuk melihat pasien yang menunggu pemeriksaan.
+
+### 9. Antrean Dokter
+<img width="605" height="415" alt="image" src="https://github.com/user-attachments/assets/1073bd5c-faee-44ef-bd62-b371cd249945" />
+
+1. Buka menu Antrean Dokter.
+
+2. Sistem menampilkan daftar pasien yang memiliki kunjungan.
+
+3. Perhatikan nomor antrean dan informasi pasien.
+
+4. Pilih pasien yang akan diperiksa.
+
+5. Sistem memeriksa apakah kunjungan sedang dibuka oleh dokter lain.
+
+6. Jika tidak ada konflik, sistem membuka data kunjungan untuk proses pemeriksaan.
+
+### 10. Pemeriksaan Ke Pasien
+<img width="601" height="410" alt="image" src="https://github.com/user-attachments/assets/f7bfb6ad-a81d-4d28-bc33-db8e806ac0a0" />
+
+1. Buka formulir pemeriksaan pasien yang dipilih.
+
+2. Periksa informasi dan riwayat kunjungan pasien.
+
+3. Masukkan keluhan pasien.
+
+4. Catat hasil pemeriksaan.
+
+5. Masukkan diagnosis berdasarkan hasil pemeriksaan.
+
+6. Jika diperlukan, tambahkan resep obat.
+
+7. Masukkan tindak lanjut apabila diperlukan.
+
+8. Periksa kembali data yang telah diisi.
+
+9. Klik tombol simpan untuk menyimpan hasil pemeriksaan.
+
+10. Sistem menyimpan hasil pemeriksaan dan memperbarui status kunjungan menjadi Selesai.
+
+### 11. Riwayat Kunjungan
+<img width="604" height="416" alt="image" src="https://github.com/user-attachments/assets/accb5836-51ce-434a-b9aa-a65e5ffdf696" />
+
+1. Buka menu Riwayat Kunjungan.
+
+2. Masukkan informasi pencarian sesuai kolom yang tersedia.
+
+3. Lakukan pencarian data kunjungan.
+
+4. Sistem menampilkan riwayat kunjungan pasien jika data ditemukan.
+
+5. Periksa tanggal kunjungan, poliklinik, dokter, nomor antrean, dan status kunjungan.
+
+### 12. Perbarui Status
+<img width="600" height="409" alt="image" src="https://github.com/user-attachments/assets/878f746b-b7cf-4d2a-9c8b-77288847f9ce" />
+
+1. Buka menu Perbarui Status.
+
+2. Sistem menampilkan daftar kunjungan pasien.
+
+3. Pilih kunjungan yang ingin diperbarui.
+
+4. Tentukan status kunjungan sesuai proses pelayanan.
+
+5. Simpan perubahan status.
+
+6. Sistem akan menampilkan pemberitahuan apabila perubahan berhasil.
+
+
 ---
 
-## Tampilan Aplikasi
+## 9.3 Tampilan Aplikasi
 
 <details open>
-<summary><b>Login dan Dashboard</b></summary>
-<br>
+<summary>Login dan Dashboard</summary>
 
 | Halaman Login | Dashboard |
 |:---:|:---:|
@@ -317,7 +585,6 @@ kode
 
 <details>
 <summary><b>Petugas</b>: kelola pasien, pendaftaran kunjungan, riwayat</summary>
-<br>
 
 | Kelola Data Pasien | Pendaftaran Kunjungan |
 |:---:|:---:|
@@ -331,7 +598,6 @@ kode
 
 <details>
 <summary><b>Dokter</b>: antrean dan form pemeriksaan</summary>
-<br>
 
 | Antrean Dokter | Form Pemeriksaan |
 |:---:|:---:|
@@ -341,14 +607,14 @@ kode
 
 ---
 
-## Anggota Kelompok
+## 10. Anggota Kelompok
 
 | No. | Nama | NIM |
 |:---:|---|---|
-| 1 | Nama Anggota 1 | NIM |
-| 2 | Nama Anggota 2 | NIM |
-| 3 | Nama Anggota 3 | NIM |
-| 4 | Nama Anggota 4 | NIM |
+| 1 | Ghea Aisyah Windrawari | 2509116022 |
+| 2 | Noor Hamsyah Pratama | 2509116046 |
+| 3 | Condrado Alain Sharon | 2509116069 |
+| 4 | Nurul Shafa Azizah | 2509116112 |
 
 ---
 
