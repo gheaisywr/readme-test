@@ -2,7 +2,7 @@
 
 # 🩺 PulseCare
 
-**Sistem Informasi Manajemen Klinik berbasis Desktop**
+**Sistem Informasi Manajemen Pasien Rawat Jalan**
 
 Kelola pasien, pendaftaran kunjungan, dan pemeriksaan medis dalam satu aplikasi yang rapi dan terintegrasi.
 
@@ -13,29 +13,28 @@ Kelola pasien, pendaftaran kunjungan, dan pemeriksaan medis dalam satu aplikasi 
 ![NetBeans](https://img.shields.io/badge/NetBeans-1B6AC6?style=flat-square&logo=apachenetbeanside&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Proyek_Pembelajaran-2ea44f?style=flat-square)
 
-[Fitur](#-fitur-utama) • [Alur Kerja](#-alur-kerja) • [Tech Stack](#-tech-stack) • [Perancangan](#-perancangan-sistem) • [Struktur](#-struktur-project) • [OOP](#-penerapan-konsep-oop) • [Menjalankan](#-cara-menjalankan) • [Tim](#-anggota-kelompok)
-
 </div>
 
 ---
 
-## Tentang PulseCare
+## 1. Tentang PulseCare
 
-PulseCare membantu proses administrasi dan pelayanan pasien di klinik. Petugas mengelola data pasien dan pendaftaran kunjungan, sedangkan dokter melihat antrean dan mencatat hasil pemeriksaan. Setiap peran memiliki hak akses sendiri sehingga pekerjaan berjalan tertib dan terarah.
+**PulseCare** merupakan sistem informasi pelayanan pasien rawat jalan yang dirancang untuk mempermudah proses administrasi dan pelayanan kesehatan. Sistem ini mencakup pengelolaan data pasien, pendaftaran kunjungan, antrean, pemeriksaan dokter, pencatatan rekam medis, diagnosis, serta resep obat sehingga proses pelayanan pasien dapat berjalan lebih teratur dan terstruktur.
+
 
 ---
 
-## Fitur Utama
+## 2. Fitur Utama
 
 Fitur dibagi berdasarkan peran pengguna agar setiap orang fokus pada tugasnya.
 
-| Peran | Yang Bisa Dilakukan |
+| Peran | Yang Dapat Dilakukan |
 |---|---|
-| **Admin** | Mengakses dashboard admin<br>Mengelola akun pengguna sesuai hak akses |
-| **Petugas** | Melihat ringkasan informasi di dashboard<br>Menambah, mengubah, mencari, dan melihat data pasien<br>Mendaftarkan kunjungan pasien ke poliklinik<br>Mencatat keluhan awal saat pendaftaran<br>Melihat riwayat kunjungan pasien |
-| **Dokter** | Melihat dashboard dan antrean pasien<br>Melihat keluhan awal yang dicatat petugas<br>Mengisi hasil pemeriksaan dan diagnosis<br>Mencatat resep obat dan catatan tindak lanjut<br>Memperbarui status kunjungan |
+| **Admin** | - Mengakses dashboard admin<br> - Mengelola akun pengguna sesuai hak akses |
+| **Petugas** | - Melihat ringkasan informasi di dashboard<br> - Menambah, mengubah, mencari, dan melihat data pasien<br> - Mendaftarkan kunjungan pasien ke poliklinik<br> - Mencatat keluhan awal saat pendaftaran<br> - Melihat riwayat kunjungan pasien |
+| **Dokter** | - Melihat dashboard dan antrean pasien<br> - Melihat keluhan awal yang dicatat petugas<br> - Mengisi hasil pemeriksaan dan diagnosis<br> - Mencatat resep obat dan catatan tindak lanjut<br> - Memperbarui status kunjungan |
 
-### Cuplikan Fitur
+### 3. Cuplikan Fitur
 
 <table>
   <tr>
@@ -56,7 +55,7 @@ Fitur dibagi berdasarkan peran pengguna agar setiap orang fokus pada tugasnya.
 
 ---
 
-## Alur Kerja
+## 4. Alur Kerja
 
 ```mermaid
 flowchart LR
@@ -70,59 +69,150 @@ flowchart LR
 
 ---
 
-## Tech Stack
+## 5. Tech Stack
 
-| Kategori | Teknologi |
-|---|---|
-| Bahasa pemrograman | Java |
-| IDE | Apache NetBeans |
-| Tampilan aplikasi | Java Swing |
-| Perancang GUI | NetBeans Swing GUI Builder |
-| Database | MySQL |
-| Pengelolaan database lokal | Laragon |
-| Perancangan database | Oracle SQL Developer Data Modeler |
-| Version control | Git dan GitHub |
-| Build dan dependency | Maven |
+Berikut merupakan teknologi yang digunakan dalam proses pengembangan aplikasi **PulseCare**.
 
-**Library tambahan**
+| Kategori | Teknologi | Keterangan |
+|---|---|---|
+| Bahasa Pemrograman | Java | Digunakan untuk membangun logika dan proses pada aplikasi PulseCare. |
+| IDE | Apache NetBeans | Digunakan untuk menulis, menjalankan, dan mengembangkan program Java. |
+| Tampilan Aplikasi | Java Swing | Digunakan untuk membuat antarmuka aplikasi desktop. |
+| Perancang GUI | NetBeans Swing GUI Builder | Membantu merancang tampilan aplikasi secara visual. |
+| Database | MySQL | Digunakan untuk menyimpan dan mengelola data sistem. |
+| Pengelolaan Database Lokal | Laragon | Digunakan untuk menjalankan dan mengelola database MySQL di lingkungan lokal. |
+| Perancangan Database | Oracle SQL Developer Data Modeler | Digunakan untuk merancang dan memvisualisasikan struktur serta hubungan antar tabel database. |
+| Version Control | Git dan GitHub | Digunakan untuk mengelola versi kode dan berkolaborasi dalam pengembangan proyek. |
+| Build dan Dependency Management | Maven | Digunakan untuk mengelola konfigurasi project, proses build, dan library tambahan. |
+| Desain UI/UX | Figma | Digunakan untuk merancang tampilan dan alur antarmuka aplikasi. |
+| Desain Visual | Canva | Digunakan untuk membuat kebutuhan desain visual proyek. |
 
-| Library | Kegunaan |
-|---|---|
-| MySQL Connector/J | Menghubungkan aplikasi Java dengan database MySQL melalui JDBC |
+### Library Tambahan
+
+Selain teknologi di atas, **PulseCare** juga menggunakan beberapa library tambahan untuk mendukung proses pengembangan aplikasi.
+
+| Library | Versi | Keterangan |
+|---|---|---|
+| MySQL Connector/J | 8.4.0 | Menghubungkan aplikasi Java dengan database MySQL melalui JDBC. |
+| AbsoluteLayout | RELEASE310 | Membantu mengatur posisi dan tata letak komponen pada antarmuka Java Swing. |
 
 ---
 
-## Perancangan Sistem
+## 6. Perancangan Sistem
 
 Diagram berikut dibuat sebagai gambaran sebelum aplikasi dikembangkan.
+### 6.1 Use Case
 
+### 6.2 Flowchart
 <details>
-<summary><b>Flowchart</b>: alur penggunaan dari login sampai pemeriksaan</summary>
-<br>
+<summary>1. Flowchart Login</summary>
 
-![Flowchart PulseCare](docs/flowchart.png)
+<img width="1683" height="1515" alt="Usecase dan Flowchart-Menu Utama drawio" src="https://github.com/user-attachments/assets/a56831da-64b2-425a-b42e-c7c6b56778d1" />
 
+Proses PulseCare dimulai dari Menu Utama, tempat pengguna dapat memilih Login atau Keluar. Pengguna yang login harus memasukkan username dan password yang akan divalidasi oleh sistem melalui database. Jika gagal, sistem memberikan maksimal tiga kali percobaan sebelum akun dikunci sementara selama 10 detik. Jika berhasil, pengguna diarahkan ke dashboard sesuai role, yaitu Admin untuk mengelola akun, Petugas untuk mengelola data dan kunjungan pasien, serta Dokter untuk mengelola antrean, melihat riwayat, dan mencatat hasil pemeriksaan. Setiap pengguna dapat melakukan logout untuk mengakhiri sesi dan kembali ke Menu Utama.
 </details>
 
 <details>
-<summary><b>Use Case Diagram</b>: hubungan Admin, Petugas, dan Dokter dengan fitur</summary>
-<br>
+<summary>2. Flowchart Dashboard admin</summary>
+<img width="1040" height="348" alt="Usecase dan Flowchart-Dashboard Admin drawio" src="https://github.com/user-attachments/assets/a8567bf9-d8c7-4201-9eda-f799d117c1e4" />
 
-![Use Case Diagram PulseCare](docs/use-case.png)
-
+flowchart untuk dashboard admin. Proses dimulai saat Admin Sistem memasuki Dashboard Admin. Sistem menampilkan ringkasan akun dan aktivitas akun terbaru. Admin Sistem kemudian dapat memilih menu Kelola Akun User untuk mengelola akun pengguna. Jika memilih Ya, sistem akan mengarahkan Admin Sistem ke halaman Kelola Akun User. Jika memilih Tidak, Admin Sistem dapat melakukan logout untuk mengakhiri sesi login.
 </details>
 
 <details>
-<summary><b>Entity Relationship Diagram (ERD)</b>: tabel database dan relasinya</summary>
-<br>
+<summary>3. Flowchart Dashboard Petugas</summary>
 
-![ERD PulseCare](docs/erd.png)
-
+<img width="1966" height="365" alt="Dashboard Petugas drawio" src="https://github.com/user-attachments/assets/aa55985b-78cd-4d90-8186-a58f061798ea" />
+Dashboard Petugas menampilkan ringkasan kunjungan dan antrean pasien hari ini. Petugas dapat mengelola data pasien, mendaftarkan kunjungan ke poliklinik, memperbarui status kunjungan, serta melihat riwayat kunjungan pasien. Jika seluruh aktivitas selesai, Petugas dapat melakukan logout untuk mengakhiri sesi.
 </details>
 
+<details>
+<summary>4. Flowchart Dashboard Dokter</summary>
+
+<img width="1605" height="365" alt="Dashboard Dokter drawio" src="https://github.com/user-attachments/assets/b3fbffd5-620e-455c-b095-4751d91680c6" />
+Dashboard Dokter menampilkan informasi pasien berikutnya dan daftar antrean sesuai poliklinik tempat dokter bertugas. Dokter dapat melihat dan memeriksa pasien melalui menu Antrean Dokter, memperbarui status kunjungan, serta melihat riwayat kunjungan pasien. Setelah selesai, Dokter dapat melakukan logout untuk mengakhiri sesi.
+</details>
+
+<details>
+<summary>5. Flowchart (Admin) Kelola Akun User</summary>
+
+<img width="2753" height="2685" alt="(Admin) Kelola Akun User drawio" src="https://github.com/user-attachments/assets/e73bd7c3-1bd3-47c0-9548-efd9aa5fa123" />
+Proses pengelolaan akun dimulai saat Admin membuka halaman Kelola Akun User. Sistem menampilkan daftar akun beserta fitur pencarian, tambah, ubah, dan nonaktifkan akun. Saat menambahkan akun, Admin mengisi nama, username, password, dan role, kemudian sistem memvalidasi kelengkapan serta keunikan username. Jika data valid, sistem menetapkan hak akses sesuai role, menyimpan akun ke database, dan menampilkan notifikasi keberhasilan.
+</details>
+
+<details>
+<summary>6. Flowchart (Petugas 1) Kelola Data Pasien</summary>
+
+<img width="2687" height="2410" alt="(Petugas 1) Kelola Data Pasien drawio" src="https://github.com/user-attachments/assets/94387ab2-5394-43fe-914c-36ba076ccb48" />
+Proses pengelolaan data pasien dimulai saat Petugas membuka halaman Kelola Data Pasien. Sistem menampilkan daftar pasien beserta fitur pencarian, tambah, ubah, dan hapus data. Petugas dapat menambahkan pasien baru, memperbarui data pasien melalui formulir yang akan divalidasi sebelum disimpan ke database, serta menghapus data pasien jika tidak memiliki kunjungan aktif. Petugas juga dapat mencari data berdasarkan nama, NIK, atau ID pasien. Jika data ditemukan, sistem menampilkannya pada tabel, sedangkan jika tidak, sistem memberikan pemberitahuan bahwa pasien tidak ditemukan. Setelah selesai, Petugas dapat kembali ke Dashboard Petugas.
+</details>
+
+<details>
+<summary>7. Flowchart (Petugas) Tambah Pasien Baru</summary>
+
+<img width="2026" height="1045" alt="(Petugas) Tambah Pasien Baru  drawio" src="https://github.com/user-attachments/assets/b727ef01-7745-4057-9a9e-e7cc99563630" />
+tambah pasien dimulai saat Petugas memilih menu Tambah Pasien Baru dan mengisi formulir data pasien. Sistem kemudian memvalidasi nomor telepon agar terdiri dari 10–13 digit dan NIK sebanyak 16 digit serta belum terdaftar. Jika seluruh data valid, sistem membuat ID pasien dan menyimpan data ke database. Setelah berhasil disimpan, sistem menampilkan notifikasi dan memberikan pilihan untuk melanjutkan ke pendaftaran kunjungan atau kembali ke halaman Kelola Data Pasien. Jika penyimpanan gagal, sistem menampilkan pesan kegagalan dan mengarahkan Petugas kembali ke halaman Kelola Data Pasien.
+</details>
+
+<details>
+<summary>8. Flowchart (Petugas2) Daftarkan Kujungan</summary>
+
+<img width="1745" height="1175" alt="(Petugas 2) Daftarkan Kunjungan drawio" src="https://github.com/user-attachments/assets/8ee1e9c7-b67a-4fa7-bf25-d8c8736beafc" />
+pendaftaran kunjungan dimulai saat Petugas membuka menu Daftarkan Kunjungan dan mencari data pasien berdasarkan nama, NIK, atau ID pasien. Jika pasien ditemukan, Petugas memilih pasien dan menentukan poliklinik yang dituju. Sistem kemudian memeriksa kemungkinan kunjungan aktif untuk mencegah pendaftaran ganda. Jika tidak ditemukan kunjungan ganda, Petugas memeriksa dan mengonfirmasi data pendaftaran. Selanjutnya, sistem menyimpan kunjungan, membuat nomor antrean secara berurutan untuk seluruh poliklinik, dan menetapkan status Menunggu. Jika pendaftaran berhasil, sistem menampilkan tiket antrean dan memberikan pilihan untuk mendaftarkan pasien berikutnya atau kembali ke Dashboard Petugas.
+</details>
+
+<details>
+<summary>9. Flowchart Daftarkan Kujungan2</summary>
+
+<img width="1968" height="1325" alt="Daftarkan Kunjungan (2) drawio" src="https://github.com/user-attachments/assets/03def17e-4d46-4c89-a364-b4e835304610" />
+pendaftaran kunjungan dimulai saat Petugas membuka menu Daftarkan Kunjungan dan mencari data pasien berdasarkan nama, NIK, atau ID pasien. Jika pasien ditemukan, Petugas memilih pasien dan menentukan poliklinik yang dituju. Sistem kemudian memeriksa kemungkinan kunjungan aktif untuk mencegah pendaftaran ganda. Jika tidak ditemukan kunjungan ganda, Petugas memeriksa dan mengonfirmasi data pendaftaran. Selanjutnya, sistem menyimpan kunjungan, membuat nomor antrean secara berurutan untuk seluruh poliklinik, dan menetapkan status Menunggu. Jika pendaftaran berhasil, sistem menampilkan tiket antrean dan memberikan pilihan untuk mendaftarkan pasien berikutnya atau kembali ke Dashboard Petugas.
+</details>
+
+<details>
+<summary>10. Flowchart Petugas dan Dokter Lihat Riwayat kunjungan </summary>
+
+<img width="1082" height="1320" alt="(Petugas dan Dokter) Lihat Riwayat Kunjungan drawio" src="https://github.com/user-attachments/assets/2c8bad01-1a44-4f90-aa32-38f6d98eab81" />
+Lihat Riwayat Kunjungan dimulai saat Petugas atau Dokter membuka menu Lihat Riwayat Kunjungan. Sistem menampilkan kolom pencarian dan filter berdasarkan waktu pendaftaran untuk mencari data kunjungan. Jika waktu pendaftaran diisi, sistem menampilkan riwayat kunjungan yang berisi tanggal pendaftaran, poliklinik, dokter, nomor antrean, dan status kunjungan. Jika pencarian tidak diisi, sistem memberikan pesan bahwa belum ada riwayat kunjungan. Setelah selesai melihat data, pengguna dapat kembali ke dashboard sesuai dengan perannya, yaitu Dashboard Petugas atau Dashboard Dokter.
+</details>
+
+<details>
+<summary>11. Flowchart (Petugas dan Dokter) Perbarui Status Kunjungan. </summary>
+
+<img width="2709" height="1447" alt="Petugas dan Dokter) Perbarui Status Kunjungan drawio" src="https://github.com/user-attachments/assets/a9b6b5a0-df0e-43b5-933d-d477687ef49e" />
+Perbarui Status Kunjungan dimulai saat Petugas atau Dokter membuka menu Perbarui Status Kunjungan. Sistem menampilkan daftar kunjungan pasien hari ini yang berisi nomor antrean, nama pasien, dokter, dan status kunjungan. Pengguna dapat memilih kunjungan dan mengubah status menjadi Menunggu, Sedang Diperiksa, atau Selesai. Sebelum disimpan, sistem memvalidasi status dan memeriksa apakah data telah diubah oleh pengguna lain. Jika tidak ada kendala, sistem menyimpan perubahan ke database dan menampilkan notifikasi keberhasilan.
+</details>
+
+<details>
+<summary>12. Flowchart (Dokter 1) Antrean Dokter </summary>
+  
+<img width="2105" height="1131" alt="(Dokter 1) Antrean Dokter drawio" src="https://github.com/user-attachments/assets/1bae8d65-bf86-4ca5-9438-2ef02ccab93d" />
+Antrean Dokter dimulai saat Dokter membuka menu Antrean Dokter untuk melihat daftar pasien dengan status Menunggu. Sistem menampilkan informasi nomor antrean, nama pasien, keluhan, dan status kunjungan. Dokter kemudian memilih pasien yang akan diperiksa. Sistem akan memeriksa apakah kunjungan tersebut sedang dibuka oleh dokter lain. Jika belum, sistem mengunci kunjungan untuk dokter yang sedang login dan mengubah statusnya menjadi Sedang Diperiksa. Selanjutnya, Dokter diarahkan ke Form Pemeriksaan untuk mencatat keluhan, hasil pemeriksaan, diagnosis, resep obat, serta catatan tindak lanjut jika diperlukan.
+</details>
+
+<details>
+<summary>13. Flowchart (Dokter) Form Pemeriksaan </summary>
+  
+<img width="1434" height="1830" alt="(Dokter) Form Pemeriksaan drawio" src="https://github.com/user-attachments/assets/1cf4d14b-1bbf-4b2e-ae96-1d9a741cdf92" />
+Form Pemeriksaan dimulai setelah Dokter memilih pasien dari halaman Antrean Dokter. Sistem menampilkan data pasien dan riwayat singkat sebagai referensi pemeriksaan. Dokter kemudian mengisi hasil pemeriksaan dan diagnosis, serta menambahkan resep obat dan catatan tindak lanjut jika diperlukan. Sebelum pemeriksaan diselesaikan, sistem memvalidasi kelengkapan hasil pemeriksaan dan diagnosis. Jika data sudah lengkap, sistem menyimpan seluruh hasil pemeriksaan ke database dan mengubah status kunjungan menjadi Selesai. Setelah itu, Dokter diarahkan kembali ke halaman Antrean Dokter untuk melayani pasien berikutnya.
+</details>
+
+### 6.3 ERD (Entity Relationship Diagram)
+
+<details>
+<summary><b>Logical</summary>
+<br>
+<img width="2760" height="1486" alt="Logical_pulse" src="https://github.com/user-attachments/assets/4a16c888-ad42-4a80-95a9-a439865d49db" />
+Diagram logical database pada sistem PulseCare menggambarkan hubungan antarentitas, yaitu pegawai, admin, petugas, dokter, shift, pasien, poliklinik, riwayat_kunjungan, dan hasil_kunjungan. Pegawai memiliki beberapa peran, yaitu admin, petugas, dan dokter. Petugas memiliki shift dan menangani pendaftaran kunjungan pasien. Setiap pasien dapat memiliki beberapa riwayat kunjungan yang terhubung dengan poliklinik. Kunjungan tersebut juga dapat ditangani oleh dokter dan menghasilkan data pemeriksaan berupa keluhan, diagnosis, resep obat, serta catatan tindak lanjut. Hubungan antarentitas ini membantu menggambarkan alur pengelolaan data pasien dan pelayanan kesehatan secara terstruktur dalam sistem PulseCare.
+</details>
+
+<details>
+<summary><b>Relational</summary>
+<br>
+
+</details>
 ---
 
-## Struktur Project
+## 7. Struktur Project
 
 > Nama folder dan package perlu disesuaikan dengan source code final.
 
@@ -157,7 +247,7 @@ PulseCare/
 
 ---
 
-## Penerapan Konsep OOP
+## 8. Penerapan Konsep OOP
 
 PulseCare dibuat dengan konsep Object-Oriented Programming. Empat konsep utamanya:
 
@@ -168,23 +258,27 @@ PulseCare dibuat dengan konsep Object-Oriented Programming. Empat konsep utamany
 | **Polymorphism** | Method yang sama berperilaku berbeda tergantung objeknya, misalnya lewat method yang di-override class turunan. |
 | **Abstraction** | Menampilkan bagian penting dan menyembunyikan detail proses, melalui `abstract class` atau `interface`. |
 
-**Contoh encapsulation**
+### 8.1 Encapsulation
 
 ```java
-public class Pasien {
-    private String namaLengkap;
-
-    public String getNamaLengkap() {
-        return namaLengkap;
-    }
-
-    public void setNamaLengkap(String namaLengkap) {
-        this.namaLengkap = namaLengkap;
-    }
-}
+kode
 ```
 
-> **Penting:** Sesuaikan bagian inheritance, polymorphism, dan abstraction dengan source code final kelompok. Jangan mencantumkan contoh sebagai fitur yang sudah diterapkan jika implementasinya belum ada.
+### 8.2 Inheritance
+
+```java
+kode
+```
+### 8.3 Polymorphism
+
+```java
+kode
+```
+### 8.4 Abstraction
+
+```java
+kode
+```
 
 ---
 
