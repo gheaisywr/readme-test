@@ -4,7 +4,7 @@
 
 **Sistem Informasi Manajemen Pasien Rawat Jalan**
 
-Kelola pasien, pendaftaran kunjungan, dan pemeriksaan medis dalam satu aplikasi yang rapi dan terintegrasi.
+Kelola pasien, pendaftaran kunjungan, dan pemeriksaan medis dalam satu program yang rapi dan terintegrasi.
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Swing](https://img.shields.io/badge/Java_Swing-5382A1?style=flat-square&logo=openjdk&logoColor=white)
@@ -57,10 +57,10 @@ Fitur dibagi berdasarkan peran pengguna agar setiap orang fokus pada tugasnya.
 
 ## 4. Alur Kerja
 1. Login
-2. Petugas: kelola data pasien
-3. Petugas: daftarkan kunjungan<br>dan catat keluhan awal
-4. Dokter: lihat antrean pasien
-5. Dokter: isi pemeriksaan, diagnosis, dan resep obat
+2. **(Petugas)** kelola data pasien
+3. **(Petugas)** daftarkan kunjungan dan catat keluhan awal
+4. **(Dokter)** lihat antrean pasien
+5. **(Dokter)** isi pemeriksaan, diagnosis, dan resep obat
 6. Status kunjungan diperbarui
 7. Riwayat kunjungan tersimpan
    
@@ -68,36 +68,36 @@ Fitur dibagi berdasarkan peran pengguna agar setiap orang fokus pada tugasnya.
 
 ## 5. Tech Stack
 
-Berikut merupakan teknologi yang digunakan dalam proses pengembangan aplikasi **PulseCare**.
+Berikut merupakan teknologi yang digunakan dalam proses pengembangan program **PulseCare**.
 
 | Kategori | Teknologi | Keterangan |
 |---|---|---|
-| Bahasa Pemrograman | Java | Digunakan untuk membangun logika dan proses pada aplikasi PulseCare. |
+| Bahasa Pemrograman | Java | Digunakan untuk membangun logika dan proses pada program PulseCare. |
 | IDE | Apache NetBeans | Digunakan untuk menulis, menjalankan, dan mengembangkan program Java. |
-| Tampilan Aplikasi | Java Swing | Digunakan untuk membuat antarmuka aplikasi desktop. |
-| Perancang GUI | NetBeans Swing GUI Builder | Membantu merancang tampilan aplikasi secara visual. |
+| Tampilan program | Java Swing | Digunakan untuk membuat antarmuka program desktop. |
+| Perancang GUI | NetBeans Swing GUI Builder | Membantu merancang tampilan program secara visual. |
 | Database | MySQL | Digunakan untuk menyimpan dan mengelola data sistem. |
 | Pengelolaan Database Lokal | Laragon | Digunakan untuk menjalankan dan mengelola database MySQL di lingkungan lokal. |
 | Perancangan Database | Oracle SQL Developer Data Modeler | Digunakan untuk merancang dan memvisualisasikan struktur serta hubungan antar tabel database. |
 | Version Control | Git dan GitHub | Digunakan untuk mengelola versi kode dan berkolaborasi dalam pengembangan proyek. |
 | Build dan Dependency Management | Maven | Digunakan untuk mengelola konfigurasi project, proses build, dan library tambahan. |
-| Desain UI/UX | Figma | Digunakan untuk merancang tampilan dan alur antarmuka aplikasi. |
+| Desain UI/UX | Figma | Digunakan untuk merancang tampilan dan alur antarmuka program. |
 | Desain Visual | Canva | Digunakan untuk membuat kebutuhan desain visual proyek. |
 
 ### Library Tambahan
 
-Selain teknologi di atas, **PulseCare** juga menggunakan beberapa library tambahan untuk mendukung proses pengembangan aplikasi.
+Selain teknologi di atas, **PulseCare** juga menggunakan beberapa library tambahan untuk mendukung proses pengembangan program.
 
 | Library | Versi | Keterangan |
 |---|---|---|
-| MySQL Connector/J | 8.4.0 | Menghubungkan aplikasi Java dengan database MySQL melalui JDBC. |
+| MySQL Connector/J | 8.4.0 | Menghubungkan program Java dengan database MySQL melalui JDBC. |
 | AbsoluteLayout | RELEASE310 | Membantu mengatur posisi dan tata letak komponen pada antarmuka Java Swing. |
 
 ---
 
 ## 6. Perancangan Sistem
 
-Diagram berikut dibuat sebagai gambaran sebelum aplikasi dikembangkan.
+Diagram berikut dibuat sebagai gambaran sebelum program dikembangkan.
 ### 6.1 Use Case
 
 ### 6.2 Flowchart
@@ -110,7 +110,7 @@ Proses PulseCare dimulai dari Menu Utama, tempat pengguna dapat memilih Login at
 </details>
 
 <details>
-<summary>2. Flowchart Dashboard admin</summary>
+<summary>2. Flowchart Dashboard Admin</summary>
 <img width="1040" height="348" alt="Usecase dan Flowchart-Dashboard Admin drawio" src="https://github.com/user-attachments/assets/a8567bf9-d8c7-4201-9eda-f799d117c1e4" />
 
 flowchart untuk dashboard admin. Proses dimulai saat Admin Sistem memasuki Dashboard Admin. Sistem menampilkan ringkasan akun dan aktivitas akun terbaru. Admin Sistem kemudian dapat memilih menu Kelola Akun User untuk mengelola akun pengguna. Jika memilih Ya, sistem akan mengarahkan Admin Sistem ke halaman Kelola Akun User. Jika memilih Tidak, Admin Sistem dapat melakukan logout untuk mengakhiri sesi login.
@@ -138,7 +138,7 @@ Proses pengelolaan akun dimulai saat Admin membuka halaman Kelola Akun User. Sis
 </details>
 
 <details>
-<summary>6. Flowchart (Petugas 1) Kelola Data Pasien</summary>
+<summary>6. Flowchart (Petugas) Kelola Data Pasien</summary>
 
 <img width="2687" height="2410" alt="(Petugas 1) Kelola Data Pasien drawio" src="https://github.com/user-attachments/assets/94387ab2-5394-43fe-914c-36ba076ccb48" />
 Proses pengelolaan data pasien dimulai saat Petugas membuka halaman Kelola Data Pasien. Sistem menampilkan daftar pasien beserta fitur pencarian, tambah, ubah, dan hapus data. Petugas dapat menambahkan pasien baru, memperbarui data pasien melalui formulir yang akan divalidasi sebelum disimpan ke database, serta menghapus data pasien jika tidak memiliki kunjungan aktif. Petugas juga dapat mencari data berdasarkan nama, NIK, atau ID pasien. Jika data ditemukan, sistem menampilkannya pada tabel, sedangkan jika tidak, sistem memberikan pemberitahuan bahwa pasien tidak ditemukan. Setelah selesai, Petugas dapat kembali ke Dashboard Petugas.
@@ -152,21 +152,21 @@ tambah pasien dimulai saat Petugas memilih menu Tambah Pasien Baru dan mengisi f
 </details>
 
 <details>
-<summary>8. Flowchart (Petugas2) Daftarkan Kujungan</summary>
+<summary>8. Flowchart (Petugas) Daftarkan Kujungan bagian 1</summary>
 
 <img width="1745" height="1175" alt="(Petugas 2) Daftarkan Kunjungan drawio" src="https://github.com/user-attachments/assets/8ee1e9c7-b67a-4fa7-bf25-d8c8736beafc" />
-pendaftaran kunjungan dimulai saat Petugas membuka menu Daftarkan Kunjungan dan mencari data pasien berdasarkan nama, NIK, atau ID pasien. Jika pasien ditemukan, Petugas memilih pasien dan menentukan poliklinik yang dituju. Sistem kemudian memeriksa kemungkinan kunjungan aktif untuk mencegah pendaftaran ganda. Jika tidak ditemukan kunjungan ganda, Petugas memeriksa dan mengonfirmasi data pendaftaran. Selanjutnya, sistem menyimpan kunjungan, membuat nomor antrean secara berurutan untuk seluruh poliklinik, dan menetapkan status Menunggu. Jika pendaftaran berhasil, sistem menampilkan tiket antrean dan memberikan pilihan untuk mendaftarkan pasien berikutnya atau kembali ke Dashboard Petugas.
+Daftarkan Kunjungan dimulai saat Petugas membuka menu Daftarkan Kunjungan. Sistem menampilkan formulir pendaftaran untuk mengisi data pasien dan informasi kunjungan. Petugas memilih pasien yang akan melakukan kunjungan, kemudian mengisi keluhan awal serta data lain yang diperlukan. Setelah data dilengkapi, Petugas menyimpan pendaftaran. Sistem memeriksa kelengkapan data. Jika data belum lengkap, sistem menampilkan pesan agar Petugas memperbaikinya. Jika data sudah sesuai, sistem menyimpan data kunjungan ke database dan menampilkan pemberitahuan bahwa pendaftaran berhasil.
 </details>
 
 <details>
-<summary>9. Flowchart Daftarkan Kujungan2</summary>
-
+<summary>9. Flowchart (Petugas) Daftarkan Kujungan bagian 2</summary>
+Sistem menampilkan daftar pasien yang tersedia untuk dipilih. Petugas memilih pasien, kemudian mengisi informasi kunjungan, termasuk keluhan awal pasien. Setelah data dikirim, sistem melakukan validasi terhadap data yang dimasukkan. Jika data tidak lengkap atau tidak sesuai, sistem menampilkan pesan kesalahan agar Petugas melakukan perbaikan. Jika data valid, sistem menyimpan kunjungan ke database. Data kunjungan yang berhasil disimpan selanjutnya dapat digunakan dalam proses pelayanan pasien, seperti antrean dokter dan pemeriksaan.
 <img width="1968" height="1325" alt="Daftarkan Kunjungan (2) drawio" src="https://github.com/user-attachments/assets/03def17e-4d46-4c89-a364-b4e835304610" />
-pendaftaran kunjungan dimulai saat Petugas membuka menu Daftarkan Kunjungan dan mencari data pasien berdasarkan nama, NIK, atau ID pasien. Jika pasien ditemukan, Petugas memilih pasien dan menentukan poliklinik yang dituju. Sistem kemudian memeriksa kemungkinan kunjungan aktif untuk mencegah pendaftaran ganda. Jika tidak ditemukan kunjungan ganda, Petugas memeriksa dan mengonfirmasi data pendaftaran. Selanjutnya, sistem menyimpan kunjungan, membuat nomor antrean secara berurutan untuk seluruh poliklinik, dan menetapkan status Menunggu. Jika pendaftaran berhasil, sistem menampilkan tiket antrean dan memberikan pilihan untuk mendaftarkan pasien berikutnya atau kembali ke Dashboard Petugas.
+
 </details>
 
 <details>
-<summary>10. Flowchart Petugas dan Dokter Lihat Riwayat kunjungan </summary>
+<summary>10. Flowchart (Petugas dan Dokter) Lihat Riwayat kunjungan </summary>
 
 <img width="1082" height="1320" alt="(Petugas dan Dokter) Lihat Riwayat Kunjungan drawio" src="https://github.com/user-attachments/assets/2c8bad01-1a44-4f90-aa32-38f6d98eab81" />
 Lihat Riwayat Kunjungan dimulai saat Petugas atau Dokter membuka menu Lihat Riwayat Kunjungan. Sistem menampilkan kolom pencarian dan filter berdasarkan waktu pendaftaran untuk mencari data kunjungan. Jika waktu pendaftaran diisi, sistem menampilkan riwayat kunjungan yang berisi tanggal pendaftaran, poliklinik, dokter, nomor antrean, dan status kunjungan. Jika pencarian tidak diisi, sistem memberikan pesan bahwa belum ada riwayat kunjungan. Setelah selesai melihat data, pengguna dapat kembali ke dashboard sesuai dengan perannya, yaitu Dashboard Petugas atau Dashboard Dokter.
@@ -180,7 +180,7 @@ Perbarui Status Kunjungan dimulai saat Petugas atau Dokter membuka menu Perbarui
 </details>
 
 <details>
-<summary>12. Flowchart (Dokter 1) Antrean Dokter </summary>
+<summary>12. Flowchart (Dokter) Antrean Dokter </summary>
   
 <img width="2105" height="1131" alt="(Dokter 1) Antrean Dokter drawio" src="https://github.com/user-attachments/assets/1bae8d65-bf86-4ca5-9438-2ef02ccab93d" />
 Antrean Dokter dimulai saat Dokter membuka menu Antrean Dokter untuk melihat daftar pasien dengan status Menunggu. Sistem menampilkan informasi nomor antrean, nama pasien, keluhan, dan status kunjungan. Dokter kemudian memilih pasien yang akan diperiksa. Sistem akan memeriksa apakah kunjungan tersebut sedang dibuka oleh dokter lain. Jika belum, sistem mengunci kunjungan untuk dokter yang sedang login dan mengubah statusnya menjadi Sedang Diperiksa. Selanjutnya, Dokter diarahkan ke Form Pemeriksaan untuk mencatat keluhan, hasil pemeriksaan, diagnosis, resep obat, serta catatan tindak lanjut jika diperlukan.
@@ -272,6 +272,8 @@ PulseCare/
 │       │       ├── DashboardDokter.form
 │       │       ├── DashboardPetugas.java
 │       │       ├── DashboardPetugas.form
+│       │       ├── DetailKunjungan.java
+│       │       ├── DetailKunjungan.form
 │       │       ├── FormAkun.java
 │       │       ├── FormAkun.form
 │       │       ├── FormPasien.java
@@ -315,14 +317,19 @@ PulseCare/
 └── pom.xml
 ```
 
+### 7.1 Struktur Package
+
+Berikut merupakan struktur package yang digunakan dalam pengembangan program PulseCare beserta fungsinya.
+
 | Package | Fungsi |
 |---|---|
-| `controller` | Mengatur proses aplikasi dan menghubungkan tampilan dengan pengolahan data |
-| `dao` | Mengambil, menambah, mengubah, dan menghapus data di database |
-| `database` | Menyimpan pengaturan dan proses koneksi database |
-| `model` | Class yang mewakili data atau objek dalam sistem |
-| `view` | Tampilan aplikasi yang dibuat dengan Java Swing |
-| `docs` | Diagram perancangan dan screenshot aplikasi |
+| `config` | Menyimpan konfigurasi dan pengaturan koneksi program ke database MySQL. |
+| `controller` | Mengatur proses progam dan menghubungkan tampilan dengan pengolahan data. |
+| `main` | Menjadi titik awal untuk menjalankan program PulseCare. |
+| `model` | Menyimpan class yang mewakili data atau objek dalam sistem, seperti Pasien, Dokter, Petugas, dan Poliklinik. |
+| `model.dao` | Mengelola proses pengambilan, penambahan, perubahan, dan penghapusan data pada database. |
+| `view` | Menyimpan tampilan program yang dibuat menggunakan Java Swing dan NetBeans GUI Builder. |
+| `resources` | Menyimpan aset pendukung tampilan program, seperti logo, ikon, gambar, dan background. |
 
 ---
 
@@ -345,10 +352,45 @@ kode
 ```
 
 ### 8.2 Inheritance (Pewarisan)
+Pada PulseCare, inheritance diterapkan pada class Admin yang mewarisi class Pegawai melalui penggunaan extends Pegawai.
+Class Admin dapat menggunakan atribut dan method yang sudah tersedia pada class Pegawai, seperti NIP, nama lengkap, password, status akun, serta getter dan setter. Selain itu, class Admin memiliki atribut tambahan berupa username.
+Penggunaan super() digunakan untuk memanggil constructor dari class Pegawai, sehingga atribut umum pegawai dapat diinisialisasi tanpa perlu ditulis ulang. Sementara itu, method getPeran() di-override untuk menentukan peran pengguna sebagai "Admin".
+Dengan penerapan ini, class Admin dapat menggunakan data umum dari Pegawai sekaligus memiliki atribut dan peran khusus sebagai Admin.
 
 **Contoh implementasi:**
 ```java
-kode
+Admin:
+
+package model;
+
+public class Admin extends Pegawai {
+
+    private String username;
+
+    public Admin() {
+        super();
+    }
+
+    public Admin(String nip, String namaLengkap, String username,
+                 String password, String statusAkun) {
+
+        super(nip, namaLengkap, password, statusAkun);
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    @Override
+    public String getPeran() {
+        return "Admin";
+    }
+}
 ```
 ### 8.3 Polymorphism (Polimorfisme)
 
@@ -357,10 +399,69 @@ kode
 kode
 ```
 ### 8.4 Abstraction (Abstraksi)
+Pada PulseCare, abstraction diterapkan melalui class Pegawai yang dideklarasikan menggunakan keyword abstract. Class ini menjadi dasar bagi class turunannya, seperti Admin, Dokter, dan Petugas, dengan menyediakan atribut dan method umum yang dimiliki setiap pegawai.
+Salah satu method yang terdapat di dalamnya adalah getPeran() yang dideklarasikan sebagai method abstrak. Method ini tidak memiliki isi di class Pegawai, sehingga setiap class turunan harus memberikan implementasinya masing-masing sesuai peran pengguna.
+Dengan penerapan ini, class Pegawai menjadi tempat penyimpanan struktur umum pegawai, sedangkan class turunannya menentukan peran masing-masing dalam sistem PulseCare.
 
 **Contoh implementasi:**
 ```java
-kode
+package model;
+
+public abstract class Pegawai {
+
+    private String nip;
+    private String namaLengkap;
+    private String password;
+    private String statusAkun;
+
+    public Pegawai() {
+    }
+
+    public Pegawai(String nip, String namaLengkap, String password, String statusAkun) {
+        this.nip = nip;
+        this.namaLengkap = namaLengkap;
+        this.password = password;
+        this.statusAkun = statusAkun;
+    }
+
+    public String getNip() {
+        return nip;
+    }
+
+    public void setNip(String nip) {
+        this.nip = nip;
+    }
+
+    public String getNamaLengkap() {
+        return namaLengkap;
+    }
+
+    public void setNamaLengkap(String namaLengkap) {
+        this.namaLengkap = namaLengkap;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getStatusAkun() {
+        return statusAkun;
+    }
+
+    public void setStatusAkun(String statusAkun) {
+        this.statusAkun = statusAkun;
+    }
+
+    public boolean aktif() {
+        return "Aktif".equalsIgnoreCase(statusAkun);
+    }
+
+    public abstract String getPeran();
+}
 ```
 
 ---
@@ -375,7 +476,7 @@ kode
 - [x] Database PulseCare beserta tabel yang dibutuhkan
 - [x] Dependency project, termasuk MySQL Connector/J
 
-### 9.2 Langkah Menjalankan Aplikasi
+### 9.2 Langkah Menjalankan program
 
 1. Buka **Laragon**, lalu jalankan **MySQL**.
 2. Pastikan database **PulseCare** sudah dibuat dan tabelnya tersedia.
@@ -384,17 +485,17 @@ kode
 5. Jalankan project dari NetBeans.
 6. Login menggunakan akun yang sudah terdaftar.
 
-### 9.3 Cara Penggunaan Fitur Aplikasi
+### 9.3 Cara Penggunaan Fitur program
 ### 1. Menu Utama
 <img width="599" height="391" alt="image" src="https://github.com/user-attachments/assets/9539061d-dce3-4d3c-8224-99c1dd429a5a" />
 
-1. Jalankan aplikasi PulseCare.
+1. Jalankan program PulseCare.
    
 2. unggu hingga halaman Menu Utama muncul.
 
 3. Klik tombol Masuk untuk melanjutkan ke halaman Login.
 
-4. Jika tidak ingin menggunakan aplikasi, klik tombol Keluar untuk menutup aplikasi.
+4. Jika tidak ingin menggunakan program, klik tombol Keluar untuk menutup program.
 
 ### 2. Login
 <img width="602" height="413" alt="Screenshot 2026-11-07 043741" src="https://github.com/user-attachments/assets/16877c52-0808-4cd4-b6a7-5103d1e7d8c5" />
@@ -460,7 +561,8 @@ kode
 7. Sistem menyimpan perubahan ke database.
    
 ### 6. Dashboard Petugas 
-<img width="1206" height="820" alt="WhatsApp Image 2026-11-07 at 22 44 30" src="https://github.com/user-attachments/assets/812b9ae7-5a2f-4678-b547-8e83be2cca92" />
+<img width="1206" height="820" alt="WhatsApp Image 2026-11-07 at 22 44 30" src="https://github.com/user-attachments/assets/86768b0e-1f00-42a2-b9fb-2986a2e65932" />
+
 
 
 1. Login menggunakan akun dengan role Petugas.
@@ -470,7 +572,8 @@ kode
 3. Pilih menu Kelola Data Pasien atau Daftarkan Kunjungan sesuai kebutuhan.
 
 ### 7.Mendaftaran Kunjungan
-<img width="581" height="394" alt="image" src="https://github.com/user-attachments/assets/03825d10-4ed3-4002-9ad1-29670e590cc6" />
+<img width="1207" height="816" alt="WhatsApp Image 2026-11-07 at 22 45 03" src="https://github.com/user-attachments/assets/032613a5-88d5-4399-ab65-ba923cf7999d" />
+
 
 1. Buka menu Daftarkan Kunjungan.
 
@@ -539,7 +642,8 @@ kode
 10. Sistem menyimpan hasil pemeriksaan dan memperbarui status kunjungan menjadi Selesai.
 
 ### 11. Riwayat Kunjungan
-<img width="604" height="416" alt="image" src="https://github.com/user-attachments/assets/accb5836-51ce-434a-b9aa-a65e5ffdf696" />
+<img width="1210" height="826" alt="WhatsApp Image 2026-11-07 at 22 45 25" src="https://github.com/user-attachments/assets/4bae6f27-a35a-40b9-a7ca-7fbb4bdef8fd" />
+
 
 1. Buka menu Riwayat Kunjungan.
 
@@ -569,7 +673,7 @@ kode
 
 ---
 
-## 9.3 Tampilan Aplikasi
+## 9.3 Tampilan program
 
 <details open>
 <summary>Login dan Dashboard</summary>
@@ -617,6 +721,6 @@ kode
 
 <div align="center">
 
-<sub>PulseCare dikembangkan sebagai proyek pembelajaran untuk menerapkan pemrograman Java, konsep OOP, pengelolaan database, dan pembuatan antarmuka aplikasi desktop.</sub>
+<sub>PulseCare dikembangkan sebagai proyek pembelajaran untuk menerapkan pemrograman Java, konsep OOP, pengelolaan database, dan pembuatan antarmuka program desktop.</sub>
 
 </div>
