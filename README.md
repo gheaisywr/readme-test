@@ -56,15 +56,13 @@ Fitur dibagi berdasarkan peran pengguna agar setiap orang fokus pada tugasnya.
 ---
 
 ## 4. Alur Kerja
-
-```mermaid
-flowchart LR
-    A[Login] --> B[Petugas: kelola data pasien]
-    B --> C[Petugas: daftarkan kunjungan<br>dan catat keluhan awal]
-    C --> D[Dokter: lihat antrean pasien]
-    D --> E[Dokter: isi pemeriksaan,<br>diagnosis, dan resep]
-    E --> F[Status kunjungan diperbarui]
-    F --> G[Riwayat kunjungan tersimpan]
+1. Login
+2. Petugas: kelola data pasien
+3. Petugas: daftarkan kunjungan<br>dan catat keluhan awal
+4. Dokter: lihat antrean pasien
+5. Dokter: isi pemeriksaan,<br>diagnosis, dan resep
+6. Status kunjungan diperbarui
+7. Riwayat kunjungan tersimpan
 ```
 
 ---
