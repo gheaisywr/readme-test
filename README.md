@@ -60,11 +60,10 @@ Fitur dibagi berdasarkan peran pengguna agar setiap orang fokus pada tugasnya.
 2. Petugas: kelola data pasien
 3. Petugas: daftarkan kunjungan<br>dan catat keluhan awal
 4. Dokter: lihat antrean pasien
-5. Dokter: isi pemeriksaan,<br>diagnosis, dan resep
+5. Dokter: isi pemeriksaan, diagnosis, dan resep obat
 6. Status kunjungan diperbarui
 7. Riwayat kunjungan tersimpan
-```
-
+   
 ---
 
 ## 5. Tech Stack
